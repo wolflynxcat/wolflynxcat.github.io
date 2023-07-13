@@ -1,1 +1,28 @@
-Wolf Lynx Catalog
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Wolf Lynx Catalog</h2>
+
+<ul id="myList"></ul>
+
+<script>
+const txt = '{"name":"John", "age":30, "city":"New York"}'
+ var request = new XMLHttpRequest();
+   request.open("GET", "../../gmail_data.json", false);
+   request.send(null)
+   var obj = JSON.parse(request.responseText);
+    let list = document.getElementById("myList");
+  for (i = 0; i < 1; ++i) {
+    var a = document.createElement("a");
+    let li = document.createElement('li');
+    a.textContent = obj[i].subject;
+    a.setAttribute('href', obj[i].body);
+    li.appendChild(a);
+    list.appendChild(li);
+    }
+
+</script>
+
+</body>
+</html>
