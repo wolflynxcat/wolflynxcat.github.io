@@ -13,7 +13,7 @@ const txt = '{"name":"John", "age":30, "city":"New York"}'
    request.send(null)
    var obj = JSON.parse(request.responseText);
     let list = document.getElementById("myList");
-  for (i = 0; i < 1; ++i) {
+  for (i = 0; i < obj.length; ++i) {
     var a = document.createElement("a");
     let li = document.createElement('li');
     a.textContent = obj[i].subject;
